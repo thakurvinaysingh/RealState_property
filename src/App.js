@@ -22,6 +22,12 @@ import Investment from './pages/Investment'
 import Transaction from './pages/Transaction'
 import Withdraw from './pages/Withdraw'
 import Account from './pages/Account'
+import VerifyEmailPage from './pages/VerifyEmailPage'
+
+// ---------admin
+import PropertyList from "./pages/AdminPropertyList";
+import AddProperty from "./pages/AdminAddProperty";
+import EditProperty from "./pages/AdminEditProperty";
 
 
 function App() {
@@ -34,7 +40,7 @@ function App() {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/about" element={<About />} />
         <Route path="/properties" element={<Property />} />
-        <Route path="/list-property" element={<PropertyDeatails />} />
+        <Route path="/details-property/:id" element={<PropertyDeatails />} />
         <Route path="/career" element={<Career />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/terms-conditions" element={<TermConditions />} />
@@ -49,6 +55,11 @@ function App() {
         <Route path="/transactions" element={<Transaction />} />
         <Route path="/withdraw" element={<Withdraw />} />
         <Route path="/account" element={<Account />} />
+        <Route path="/verify-email" element={<VerifyEmailPage />} />
+        {/* ----admin routes-------- */}
+        <Route path="/admin/properties" element={<PropertyList />} />
+        <Route path="/admin/properties/add" element={<AddProperty />} />
+        <Route path="/admin/properties/edit/:id" element={<EditProperty />} />
      
       </Routes>
   );
